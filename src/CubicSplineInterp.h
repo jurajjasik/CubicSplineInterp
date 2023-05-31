@@ -11,6 +11,8 @@
 
 class CubicSplineInterp {
 private:
+    volatile bool _notValid = true;
+    volatile bool _inCalc = false;
 	int _n; // number of tabulated points
 	float _y2[CSI_MAX_TAB_POINTS]; // contains the second derivatives of the interpolating function at the tabulated points 
 	const float* _x;
@@ -32,7 +34,7 @@ public:
 	 */
 	void init(const float* x, const float* y, int n);
 	
-	float calc(float x);
+	float calc(float x) const;
     float calcHunt(float x);
 };
 
