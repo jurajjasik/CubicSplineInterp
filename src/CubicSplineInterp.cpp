@@ -4,8 +4,6 @@
 //#define CSI_TRACE(x) x
 
 void CubicSplineInterp::init(const float* x, const float* y, int n){
-    while (_inCalc) {}
-
     _notValid = true;
 
     _x = x;
@@ -81,8 +79,6 @@ float CubicSplineInterp::calcHunt(float x)
 }
 
 void CubicSplineInterp::_hunt(float x, int *jlo){
-    _inCalc = true;
-
     int jhi;
     int ascnd = ( _x[_n - 1] >= _x[0] ); //True if ascending order of table, false otherwise.
 
@@ -150,8 +146,6 @@ void CubicSplineInterp::_hunt(float x, int *jlo){
         else
             jhi = jm;
     }
-
-    _inCalc = false;
 }
 
 

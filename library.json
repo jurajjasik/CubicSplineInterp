@@ -1,6 +1,6 @@
 {
     "name": "CubicSplineInterp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": "arduino, library, cubic spline",
     "description": "Library for calculation of cubic spline interpolation.",
     "homepage": "https://github.com/jurajjasik/CubicSplineInterp",
